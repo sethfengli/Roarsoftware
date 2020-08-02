@@ -57,6 +57,7 @@ TestResults/
 .DS_Store?
 ehthumbs.db
 Icon?
+.vs
 Thumbs.db
 [Bb]in
 [Oo]bj
