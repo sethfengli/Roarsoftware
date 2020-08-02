@@ -22,12 +22,12 @@ namespace AvailableGroups.Controllers
         [Authorize]
         public async Task Logout()
         {
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             await HttpContext.SignOutAsync("AuthRoar", new AuthenticationProperties
             {
                 // **Allowed Logout URLs** settings for the client.
                 RedirectUri = Url.Action("Index", "Home")
-            });
-            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            });       
         }
 
 
